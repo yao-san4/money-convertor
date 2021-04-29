@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./MainInfo.css";
+import CurrencyInfo from "../CurrencyInfo/CurrencyInfo";
 
 export default class Info extends Component {
   state = {
@@ -59,6 +60,30 @@ export default class Info extends Component {
   }
 
   render() {
-    return <></>;
+    return (
+      <>
+        <CurrencyInfo
+          name={this.state.ua.name}
+          firstName={this.state.ua.firstName}
+          firstRate={this.state.ua.firstRate}
+          secondName={this.state.ua.secondName}
+          secondRate={this.state.ua.secondRate}
+        />
+        <CurrencyInfo
+          name={this.state.us.name}
+          firstName={this.state.us.firstName}
+          firstRate={this.state.us.firstRate}
+          secondName={this.state.us.secondName}
+          secondRate={this.state.us.secondRate}
+        />
+        <CurrencyInfo
+          name={this.state.eu.name}
+          firstName={this.state.eu.firstName}
+          firstRate={this.state.eu.firstRate}
+          secondName={this.state.eu.secondName}
+          secondRate={this.state.eu.secondRate}
+        />
+      </>
+    );
   }
 }
