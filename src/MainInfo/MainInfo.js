@@ -33,8 +33,6 @@ export default class Info extends Component {
       const us = await resUs.json();
       const eu = await resEu.json();
 
-      console.log(ua.usd);
-
       const uaState = { ...this.state.ua };
       uaState.firstName = ua.usd.code;
       uaState.firstRate = ua.usd.inverseRate.toFixed(2);
